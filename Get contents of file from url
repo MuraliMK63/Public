@@ -1,0 +1,14 @@
+# Get File content using Url program
+
+
+# Here I imported requests library in order to make HTTP request
+import requests
+import html2text
+link = input("Enter Your URL:")
+# GET method is used to request data from the server
+content = requests.get(link)
+# And text is basically used to get text from the server 
+print(content.text)
+# For Normal text content of the server, you can use "html2text" package
+# I also provided the code snippet below so that you can check it
+print(html2text.html2text(content.text))
